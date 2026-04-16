@@ -23,14 +23,14 @@ export default function LoginPage() {
         <div className="space-y-3">
           <button
             onClick={() => signIn("github", { callbackUrl: "/" })}
-            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-white text-black text-sm font-medium hover:bg-gray-100 transition-colors"
+            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-white text-black text-sm font-medium hover:bg-gray-100 transition-colors hover:cursor-pointer"
           >
             <GitHubIcon />
             Continue with GitHub
           </button>
           <button
             onClick={() => signIn("google", { callbackUrl: "/" })}
-            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-[#2a2f42] text-white text-sm font-medium hover:bg-[#2a2f42] transition-colors"
+            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-[#2a2f42] text-white text-sm font-medium hover:bg-[#2a2f42] transition-colors hover:cursor-pointer"
           >
             <GoogleIcon />
             Continue with Google

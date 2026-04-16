@@ -45,7 +45,7 @@ export default function RequestPanel({ onSend, loading, initialState }: Props) {
         <select
           value={method}
           onChange={e => setMethod(e.target.value as HttpMethod)}
-          className={`bg-[#1a1f2e] border border-[#2a2f42] rounded-lg px-3 py-2 text-sm font-mono font-semibold focus:outline-none focus:border-violet-500 ${METHOD_COLORS[method]}`}
+          className={`bg-[#1a1f2e] border border-[#2a2f42] rounded-lg px-3 py-2 text-sm font-mono font-semibold focus:outline-none focus:border-violet-500 hover:cursor-pointer ${METHOD_COLORS[method]}`}
         >
           {METHODS.map(m => (
             <option key={m} value={m}>{m}</option>
@@ -62,7 +62,7 @@ export default function RequestPanel({ onSend, loading, initialState }: Props) {
         <button
           onClick={handleSend}
           disabled={loading || !url.trim()}
-          className="px-4 py-2 bg-violet-600 hover:bg-violet-500 disabled:opacity-50 disabled:cursor-not-allowed rounded-lg text-sm font-medium text-white transition-colors"
+          className="px-4 py-2 bg-violet-600 hover:bg-violet-500 disabled:opacity-50 disabled:cursor-not-allowed rounded-lg text-sm font-medium text-white transition-colors hover:cursor-pointer"
         >
           {loading ? "Sending..." : "Send"}
         </button>
@@ -74,7 +74,7 @@ export default function RequestPanel({ onSend, loading, initialState }: Props) {
           <button
             key={t}
             onClick={() => setTab(t)}
-            className={`px-3 py-1.5 text-sm capitalize transition-colors ${
+            className={`px-3 py-1.5 text-sm capitalize transition-colors hover:cursor-pointer ${
               tab === t
                 ? "text-violet-400 border-b-2 border-violet-400"
                 : "text-gray-500 hover:text-gray-300"
@@ -109,7 +109,7 @@ export default function RequestPanel({ onSend, loading, initialState }: Props) {
               />
               <button
                 onClick={() => removeHeader(h.id)}
-                className="px-2 text-gray-600 hover:text-red-400 transition-colors"
+                className="px-2 text-gray-600 hover:text-red-400 transition-colors hover:cursor-pointer"
               >
                 ✕
               </button>
@@ -117,7 +117,7 @@ export default function RequestPanel({ onSend, loading, initialState }: Props) {
           ))}
           <button
             onClick={addHeader}
-            className="text-sm text-violet-400 hover:text-violet-300 text-left transition-colors"
+            className="text-sm text-violet-400 hover:text-violet-300 text-left transition-colors hover:cursor-pointer"
           >
             + Add header
           </button>

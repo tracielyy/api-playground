@@ -89,7 +89,7 @@ export default function ResponsePanel({ response, loading }: Props) {
           <button
             key={t}
             onClick={() => setTab(t)}
-            className={`px-3 py-1.5 text-sm capitalize transition-colors ${
+            className={`px-3 py-1.5 text-sm capitalize transition-colors hover:cursor-pointer ${
               tab === t
                 ? "text-violet-400 border-b-2 border-violet-400"
                 : "text-gray-500 hover:text-gray-300"

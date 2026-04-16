@@ -18,7 +18,7 @@ export default function AuthButton() {
       <span className="text-xs text-gray-400">{session.user?.email}</span>
       <button
         onClick={() => signOut({ callbackUrl: "/login" })}
-        className="text-xs text-gray-600 hover:text-gray-300 transition-colors"
+        className="text-xs text-gray-600 hover:text-gray-300 transition-colors hover:cursor-pointer"
       >
         Sign out
       </button>

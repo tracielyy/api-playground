@@ -88,7 +88,7 @@ export default function Home() {
           <span className="text-sm font-semibold text-violet-400 font-mono">API Playground</span>
           <button
             onClick={() => setHistoryOpen(o => !o)}
-            className="text-xs text-gray-500 hover:text-gray-300 transition-colors border border-[#2a2f42] px-2 py-1 rounded"
+            className="text-xs text-gray-500 hover:text-gray-300 transition-colors border border-[#2a2f42] px-2 py-1 rounded hover:cursor-pointer"
           >
             History {history.length > 0 && `(${history.length})`}
           </button>

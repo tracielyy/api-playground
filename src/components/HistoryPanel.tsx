@@ -28,7 +28,7 @@ export default function HistoryPanel({ history, onSelect, onClear }: Props) {
         <span className="text-xs text-gray-500">Recent</span>
         <button
           onClick={onClear}
-          className="text-xs text-gray-600 hover:text-red-400 transition-colors"
+          className="text-xs text-gray-600 hover:text-red-400 transition-colors hover:cursor-pointer"
         >
           Clear
         </button>
@@ -37,7 +37,7 @@ export default function HistoryPanel({ history, onSelect, onClear }: Props) {
         <button
           key={item.id}
           onClick={() => onSelect(item)}
-          className="flex items-center gap-2 px-2 py-1.5 rounded-lg hover:bg-[#1a1f2e] text-left transition-colors group"
+          className="flex items-center gap-2 px-2 py-1.5 rounded-lg hover:bg-[#1a1f2e] text-left transition-colors group hover:cursor-pointer"
         >
           <span className={`text-xs font-mono font-semibold w-12 shrink-0 ${METHOD_COLORS[item.method] ?? "text-gray-400"}`}>
             {item.method}
