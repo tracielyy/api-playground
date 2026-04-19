@@ -1,8 +1,14 @@
-export { default } from "next-auth/middleware"
+import { withAuth } from "next-auth/middleware"
+
+export default withAuth({
+  pages: {
+    signIn: "/login",
+  },
+})
 
 export const config = {
   matcher: [
-    "/api/proxy",   // protect proxy endpoint
-    "/((?!login|api/auth|_next/static|_next/image|favicon.ico).*)", // protect all pages except login
+    "/api/proxy",
+    "/((?!login|api/auth|_next/static|_next/image|favicon.ico).*)",
   ],
 }
