@@ -9,6 +9,7 @@ export default withAuth({
 export const config = {
   matcher: [
     "/api/proxy",
+    "/admin",
     "/((?!login|api/auth|_next/static|_next/image|favicon.ico).*)",
   ],
 }
