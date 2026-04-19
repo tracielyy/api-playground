@@ -8,8 +8,8 @@ function LoginContent() {
   const error = searchParams.get("error")
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-[#0e1117]">
-      <div className="w-full max-w-sm space-y-6 p-8 rounded-xl border border-[#2a2f42] bg-[#1a1f2e]">
+    <main className="min-h-screen flex items-center justify-center">
+      <div className="w-full max-w-sm space-y-6 p-14 rounded-xl border border-[#2a2f42] bg-slate-card">
         <div className="space-y-1">
           <h1 className="text-xl font-semibold text-white">API Playground</h1>
           <p className="text-sm text-gray-400">Sign in to continue</p>
@@ -44,7 +44,7 @@ function LoginContent() {
 
 export default function LoginPage() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-[#0e1117]">
+    <main className="min-h-screen flex items-center justify-center">
       <Suspense fallback={null}>
         <LoginContent />
       </Suspense>

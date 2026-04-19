@@ -81,7 +81,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0e1117] text-white flex flex-col">
+    <div className="min-h-screen text-white flex flex-col">
       {/* Header */}
       <header className="border-b border-[#2a2f42] px-6 py-3 flex items-center justify-between shrink-0">
         <div className="flex items-center gap-3">
