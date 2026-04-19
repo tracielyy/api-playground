@@ -1,7 +1,7 @@
 import NextAuth from "next-auth"
 import GitHub from "next-auth/providers/github"
 import Google from "next-auth/providers/google"
-import { isAllowed } from "@/lib/allowlist"
+import { isAllowed, isAdmin } from "@/lib/allowlist"
 
 const handler = NextAuth({
   providers: [
@@ -23,6 +23,9 @@ const handler = NextAuth({
       return isAllowed(user.email)
     },
     async session({ session, token }) {
+      if (session.user?.email) {
+        session.user.isAdmin = isAdmin(session.user.email);
+      }
       return session
     },
   },
