@@ -1,8 +1,9 @@
 "use client"
 import { signIn } from "next-auth/react"
 import { useSearchParams } from "next/navigation"
+import { Suspense } from "react"
 
-export default function LoginPage() {
+function LoginContent() {
   const searchParams = useSearchParams()
   const error = searchParams.get("error")
 
@@ -16,7 +17,7 @@ export default function LoginPage() {
 
         {error === "AccessDenied" && (
           <p className="text-sm text-red-400 bg-red-400/10 px-3 py-2 rounded-md">
-            Your account is not on the allowlist.
+            Your account is not whitelisted.
           </p>
         )}
 
@@ -37,6 +38,16 @@ export default function LoginPage() {
           </button>
         </div>
       </div>
+    </main>
+  )
+}
+
+export default function LoginPage() {
+  return (
+    <main className="min-h-screen flex items-center justify-center bg-[#0e1117]">
+      <Suspense fallback={null}>
+        <LoginContent />
+      </Suspense>
     </main>
   )
 }
